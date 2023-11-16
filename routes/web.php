@@ -16,16 +16,14 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-    Route::get('/', [AboutController::class,'index'])->name('about');
-    Route::resource('kategori', KategoriController::class);
-    Route::resource('arsip', ArsipController::class);
-    Route::get('arsip/show/{id}', [ArsipController::class, 'show'])->name('arsip.show');
-    Route::get('arsip/download/{id}', [ArsipController::class, 'download'])->name('arsip.download');
-    Route::get('arsip/create', [ArsipController::class, 'create'])->name('arsip.create');
-    Route::get('kategori/create', [KategoriController::class, 'create'])->name('kategori.create');
-    Route::get('kategori/edit/{id}', [KategoriController::class, 'edit'])->name('kategori.edit');
-
-    Route::get('arsip/edit/{id}', [ArsipController::class, 'edit'])->name('arsip.edit');
-    Route::put('arsip/update/{id}', [ArsipController::class, 'update'])->name('arsip.update');
-    Route::patch('arsip/update/{id}', [ArsipController::class, 'update'])->name('arsip.update');
+Route::get("/", fn () => view("about.index"))->name('about');
+Route::resource('kategori', KategoriController::class);
+Route::resource('arsip', ArsipController::class);
+Route::get('arsip/show/{id}', [ArsipController::class, 'show'])->name('arsip.show');
+Route::get('arsip/download/{id}', [ArsipController::class, 'download'])->name('arsip.download');
+Route::get('arsip/create', [ArsipController::class, 'create'])->name('arsip.create');
+Route::get('kategori/create', [KategoriController::class, 'create'])->name('kategori.create');
+Route::get('kategori/edit/{id}', [KategoriController::class, 'edit'])->name('kategori.edit');
+Route::get('arsip/edit/{id}', [ArsipController::class, 'edit'])->name('arsip.edit');
+Route::put('arsip/update/{id}', [ArsipController::class, 'update'])->name('arsip.update');
+Route::patch('arsip/update/{id}', [ArsipController::class, 'update'])->name('arsip.update');

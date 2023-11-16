@@ -14,7 +14,7 @@
             </li>
             <li>
                 <a href="{{ route('about') }}" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">About</span>
+                    <i class="icon-info menu-icon"></i><span class="nav-text">About</span>
                 </a>
             </li>
         </ul>
