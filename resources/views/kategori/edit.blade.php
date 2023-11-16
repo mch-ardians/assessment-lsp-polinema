@@ -37,7 +37,7 @@
                                     <label class="col-lg-4 col-form-label" for="judul_kategori">Keterangan <span class="text-danger">*</span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <textarea class="form-control"  name="judul_kategori" id="judul_kategori" rows="5" placeholder="Judul">{{ $kategori->judul_kategori }}</textarea>
+                                        <textarea class="form-control"  name="judul_kategori" id="judul_kategori" rows="5" placeholder="Keterangan">{{ $kategori->judul_kategori }}</textarea>
                                     </div>
                                 </div>
                                 <div class="general-button">
